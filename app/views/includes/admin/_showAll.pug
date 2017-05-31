@@ -1,0 +1,26 @@
+section
+  div.container
+    h2 Товары
+    table.admin-table-items.table-striped
+      thead
+        tr
+          th
+          th Название товара
+          th Цена
+          th Описание
+          th
+      tbody
+        each item in aItems
+          tr 
+            td
+              a(href='/admin/delete/'+ item._id)
+                span.fa.fa-trash-o
+            td #{item.name_dress}
+            td #{item.price}
+            td #{item.description}
+            td
+              a(href='/admin/edit/'+ item._id)
+                span.fa.fa-pencil
+              
+
+    a(href="/admin/additems" role="button").btn.btn-info Добавить товар

@@ -1,0 +1,34 @@
+html
+  include ../includes/_head.pug
+  body
+    section
+      form(id="additem", method="post", enctype="multipart/form-data", action="/admin/additems")
+        label(for="description")
+        h3 Описание
+        //- input(id="description",type="text", name="description")
+        textarea(id="description",type="text", name="description", rows="10" cols="40")
+        br
+        label(for="price")
+          h3 Цена
+        input(id="price",type="number", name="price")
+        br
+        //- label(for="article")
+        //-   h3 Артикул
+        //- input(id="article",type="number", name="article")
+        br
+        label(for="url_images")
+          h3 Фото
+        input(id="url_images", type="file", name="url_images", multiple)
+        br
+        label(for="name_dress")
+          h3 Название товара
+        input(id="name_dress",type="text", name="name_dress")
+        br
+        label(for="submit")
+          h3 Добавить товар
+        input(id="submitBtn",type="submit")
+      //-     
+      //- form(method="post", enctype="multipart/form-data", action="/admin/additems")
+      //-   input(type="file", name="url_images", multiple)
+      //-   input(type="submit")
+      //-     

@@ -1,0 +1,19 @@
+{
+  "name": "o",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "dz",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon app/app.js -e css,pug,js,json --watch app"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.8",
+    "multer": "^1.3.0",
+    "nodemon": "^1.11.0",
+    "pug": "^2.0.0-rc.1",
+    "reload": "^1.1.3"
+  }
+}

@@ -1,0 +1,26 @@
+nav.navbar.navbar-fixed-top.navi
+  .container-fluid
+    ul.nav.navbar-nav.navi-text
+      li
+        a(href="/") Home
+      li
+        a(href="/item") Page-1
+      li.dropdown
+        a(href="#" data-toggle="dropdown").dropdown-toggle Page-2
+          span.caret
+        ul(role="menu").dropdown-menu
+          li
+            a(href="#") Items-1
+          li
+            a(href="#") Items-2
+          li
+            a(href="#") Items-3
+      li
+        a(href="#") Page-3
+    .navbar-header.navi-brand-position
+      a(href="#").navbar-brand BrandLogo
+    form.navbar-form.navbar-right.navi-form
+      .form-group
+        input(type="text" placeholder="").form-control.navi-search-input
+      button(type="submit").btn.search-input.navi-btn
+        span.fa.fa-search
