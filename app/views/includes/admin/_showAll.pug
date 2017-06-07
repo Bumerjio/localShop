@@ -24,3 +24,10 @@ section
               
 
     a(href="/admin/additems" role="button").btn.btn-info Добавить товар
+    
+    form(id="", method="get", action="/admin")
+      .form-group
+        input(id="search" type="text" placeholder="Enter text" name="search" value= search).form-control
+      
+        button(type="submit").btn.search-input
+          span.fa.fa-search

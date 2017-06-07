@@ -8,8 +8,8 @@ const mongoose = require('mongoose');
 router.get('/', (req, res, next) => {
   mongooseConnect.Item.find().exec()
     .then((items) => {
-        res.render('index', {item: items})
-      })
+      res.render('index', {item: items})
+    })
     .catch(next)
     // console.log(res.)
 });

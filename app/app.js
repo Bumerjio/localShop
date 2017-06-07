@@ -14,8 +14,7 @@ app.set('port', process.env.PORT || 3000);
 
 // app.set('appData', dataFile);
 app.set('view engine', 'pug');
-app.set('views', 'app/views');
-
+app.set('views', __dirname + '/views');
 //basic static route
 app.use(express.static(path.join(__dirname, 'public')));
 //route for /items/:id/
@@ -37,6 +36,20 @@ app.use(require('./routes/admin/additems'));
 app.use(require('./routes/admin/edit'));
 app.use(require('./routes/admin/delete'));
 app.use(require('./routes/currentItem'));
+
+//обработчик ошибок!
+app.use((req, res, next) => {
+    res.status(404);
+    res.send('Page not found!');
+    return;
+});
+
+app.use(function(err, req, res, next){
+    res.status(err.status || 500);
+    // log.error('Internal error(%d): %s',res.statusCode,err.message);
+    res.send({ error: err.message });
+    return;
+});
 
 // app.use(require('./routes/index/:id'));//зделать через :id etc
 
